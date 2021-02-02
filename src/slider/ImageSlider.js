@@ -30,7 +30,7 @@ const length = slides.length
                 <div className={idx === current ? 'slide active' : 'slide'} key={idx}
                 >
                 {idx === current && (
-                    <img src={slide.image} alt='construction' className='image' width='650px' height='650px' />
+                    <img src={slide.image} alt='construction' className='image' />
                 )}
                 </div>
             );
