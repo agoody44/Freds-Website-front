@@ -51,7 +51,7 @@ formSubmit=(e) => {
         message:this.state.message,
     }
 
-axios.post('/api/forma',data)
+axios.post('/api/form',data)
 .then(res => {
     this.setState({
         sent:true,
@@ -142,3 +142,31 @@ resetForm=() =>{
         )
     }
 }
+
+
+
+
+
+
+
+// formSubmit=(e) => {
+//     e.preventDefault();
+
+
+//     axios({
+//         method: "POST", 
+//         url:"http://localhost:3000/send", 
+//         data:  this.state
+//     }).then((response)=>{
+//         if (response.data.status === 'success'){
+//             alert("Message Sent."); 
+//             this.resetForm()
+//         }else if(response.data.status === 'fail'){
+//             alert("Message failed to send.")
+//         }
+//         })
+// }
+
+// resetForm(){
+//         this.setState({name: '', lastname: '',email:'', message: ''})
+// }
