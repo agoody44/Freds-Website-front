@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 import axios from 'axios';
 
 
 export default class Form extends Component {
+
 
 state={
     name:'',
@@ -11,61 +11,76 @@ state={
     email:'',
     message:'',
     sent:false,
+    buttonText: 'Send Message',
+
 }
 
-// handle inputs
-handleName=(e) => {
+
+// handle inputs 
+
+handleName = (e)=>{
     this.setState({
         name:e.target.value
-    })
-    
+})
 }
-handleLastName=(e) => {
+
+handleLastname = (e)=>{
     this.setState({
         lastname:e.target.value
     })
-
 }
-handleEmail=(e) => {
+
+handleEmail = (e)=>{
     this.setState({
         email:e.target.value
     })
-
 }
-handleMessage=(e) => {
+
+handleMessage = (e)=>{
     this.setState({
         message:e.target.value
     })
-
 }
+
 // end of handle inputs
 
 
-formSubmit=(e) => {
+
+
+
+formSubmit=(e)=>{
     e.preventDefault();
+    console.log(this.state);
+    console.log('submit clicked');
+
+
 
     let data = {
         name:this.state.name,
         lastname:this.state.lastname,
         email:this.state.email,
-        message:this.state.message,
+        message:this.state.message
     }
 
-axios.post('/api/form',data)
+
+
+
+axios.post('/send', data)
 .then(res => {
     this.setState({
         sent:true,
     },this.resetForm())
 })
-.catch(() => {
-    console.log('message not sent');
+.catch(()=>{
+    console.log('message not send');
+    
 })
+
 
 }
 
-
-// resetting data
-resetForm=() =>{
+// for reseting the form data
+resetForm=()=>{
     this.setState({
         name:'',
         lastname:'',
@@ -73,100 +88,63 @@ resetForm=() =>{
         message:'',
     })
 
-    setTimeout(() => {
+    setTimeout(()=>{
         this.setState({
             sent:false,
         })
-    },3000)
+    },2000)
 }
+
+
 
 
     render() {
         return (
-            <div className='container'>
-                <form onSubmit={this.formSubmit}>
-                    <div className="singleItem">
-                        <label htmlFor="name">Name</label>
-                        <input type="text" 
-                        name='name' 
-                        className="name" 
-                        placeholder="your name..."
-                        value={this.state.name}
-                        onChange={this.handleName}
-                        />
-                    </div>
+            <div className="container">
+            <form onSubmit={this.formSubmit}>
+            <div className="singleItem">
+                <label htmlFor="name">Name</label>
+                <input type="text" 
+                name="name" 
+                className="name" 
+                value={this.state.name} 
+                onChange={this.handleName} 
+                placeholder="your name..." />
+            </div>
+            <div className="singleItem">
+                <label htmlFor="lastname">Lastname</label>
+                <input type="text" 
+                name="lastname" 
+                className="lastname" 
+                value={this.state.lastname} 
+                onChange={this.handleLastname} 
+                placeholder="your lastname..." />
+            </div>
+            <div className="singleItem">
+                <label htmlFor="email">Email</label>
+                <input type="email" 
+                name="email" 
+                className="email" 
+                value={this.state.email} 
+                onChange={this.handleEmail} 
+                placeholder="your email..." 
+                required />
+            </div>
+            <div className="textArea singleItem">
+            <label htmlFor="message">Message</label>
+                <textarea name="message" 
+                value={this.state.message} 
+                id="" cols="30" rows="5" 
+                placeholder="your message..." 
+                onChange={this.handleMessage}></textarea>
+            </div>
+                <div className={this.state.sent ?'msg msgAppear':'msg'}>Message has been sent</div>
+            <div className="btn">
+            <button type="submit">Submit</button>
+            </div>
 
-                    <div className="singleItem">
-                        <label htmlFor="lastname">Lastname</label>
-                        <input type="text" 
-                        name='lastname' 
-                        className="lastname" 
-                        placeholder="your lastname..."
-                        value={this.state.lastname}
-                        onChange={this.handleLastName}
-                        />
-                    </div>
-
-                    <div className="singleItem">
-                        <label htmlFor="email">Email</label>
-                        <input type="text" 
-                        name='email' 
-                        className="name" 
-                        placeholder="your email..."
-                        value={this.state.email}
-                        onChange={this.handleEmail}
-                        required
-                        />
-                    </div>
-
-                    <div className="textarea singleItem">
-                        <label htmlFor="message">Message</label>
-                        <textarea name="message" 
-                        id="" 
-                        cols="30" 
-                        rows="5" 
-                        placeholder='your message...'
-                        value={this.state.message}
-                        onChange={this.handleMessage}
-                        >
-                        </textarea>
-                    </div>
-
-                    <div className={this.state.sent ?'msg msgAppear' : 'msg'}>Message has been sent</div>
-
-                    <div className="btn">
-                        <button type='submit'>Submit</button>
-                    </div>
-                </form>
+            </form>
             </div>
         )
     }
 }
-
-
-
-
-
-
-
-// formSubmit=(e) => {
-//     e.preventDefault();
-
-
-//     axios({
-//         method: "POST", 
-//         url:"http://localhost:3000/send", 
-//         data:  this.state
-//     }).then((response)=>{
-//         if (response.data.status === 'success'){
-//             alert("Message Sent."); 
-//             this.resetForm()
-//         }else if(response.data.status === 'fail'){
-//             alert("Message failed to send.")
-//         }
-//         })
-// }
-
-// resetForm(){
-//         this.setState({name: '', lastname: '',email:'', message: ''})
-// }
