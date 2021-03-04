@@ -7,7 +7,7 @@ export default class Form extends Component {
 
 state={
     name:'',
-    lastname:'',
+    // lastname:'',
     email:'',
     message:'',
     sent:false,
@@ -24,11 +24,11 @@ handleName = (e)=>{
 })
 }
 
-handleLastname = (e)=>{
-    this.setState({
-        lastname:e.target.value
-    })
-}
+// handleLastname = (e)=>{
+//     this.setState({
+//         lastname:e.target.value
+//     })
+// }
 
 handleEmail = (e)=>{
     this.setState({
@@ -57,7 +57,7 @@ formSubmit=(e)=>{
 
     let data = {
         name:this.state.name,
-        lastname:this.state.lastname,
+        // lastname:this.state.lastname,
         email:this.state.email,
         message:this.state.message
     }
@@ -83,7 +83,7 @@ axios.post('/send', data)
 resetForm=()=>{
     this.setState({
         name:'',
-        lastname:'',
+        // lastname:'',
         email:'',
         message:'',
     })
@@ -111,7 +111,7 @@ resetForm=()=>{
                 onChange={this.handleName} 
                 placeholder="your name..." />
             </div>
-            <div className="singleItem">
+            {/* <div className="singleItem">
                 <label htmlFor="lastname">Lastname</label>
                 <input type="text" 
                 name="lastname" 
@@ -119,7 +119,7 @@ resetForm=()=>{
                 value={this.state.lastname} 
                 onChange={this.handleLastname} 
                 placeholder="your lastname..." />
-            </div>
+            </div> */}
             <div className="singleItem">
                 <label htmlFor="email">Email</label>
                 <input type="email" 
@@ -131,7 +131,7 @@ resetForm=()=>{
                 required />
             </div>
             <div className="textArea singleItem">
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Message me</label>
                 <textarea name="message" 
                 value={this.state.message} 
                 id="" cols="30" rows="5" 

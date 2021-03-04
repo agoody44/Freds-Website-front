@@ -5,18 +5,59 @@
 }
 
 
+.Header {
+  background-color: #b1b1b1;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #b13333;
+  background-image:url("./imgs/header.png");
+  background-size: cover;
+}
+
+.App{
+  background-image:url("./imgs/background3.png");
+  background-size: cover;
+}
+
+.Nav {
+  list-style: none;
+  display: flex;
+}
+
+.Nav h1 {
+  margin-right: 20px;
+}
+
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #8f8f8f;
+  color: #000000;
+  bottom:0;
+  width:100%
+}
+
+
 .slider {
   position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .image {
   width: 650px;
   height: 500px;
   border-radius: 10px;
+  border: 2px solid #000000;
 }
 
 .right-arrow {
@@ -55,6 +96,7 @@
 .welcome {
   display: flex;
   justify-content: center;
+  background-color: #fefefe;
   border: 1px solid #000000;
   border-radius: 10px;
   padding: 30px;
@@ -62,9 +104,10 @@
 }
 
 .container {
-  background-color: rgb(137, 138, 138);
-  margin: 100px auto;
+  background-color: rgb(150, 216, 216);
+  margin: 40px auto;
   width: 90%;
+  border: 1px solid #000000;
   box-shadow: 1px 1px 4px 1px lightgray;
 }
 
@@ -111,6 +154,7 @@ box-shadow: 1px 1px 4px 1px rgb(49,170,240);
   transition: all 0.5s ease-in-out;
   position: relative;
   margin-top: 5px;
+  /* border: 2px solid #000000; */
 }
 .btn button:hover {
   border: 1px solid #fefefe;
