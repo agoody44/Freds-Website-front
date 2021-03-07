@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { SliderData } from './SliderData';
-import { FaArrowAltCircleRight,FaArrowAltCircleLeft } from 'react-icons/fa'; 
+import { FaArrowCircleRight,FaArrowCircleLeft } from 'react-icons/fa'; 
 
 const ImageSlider = ({ slides }) => {
 const [current, setCurrent] = useState(0)
@@ -21,21 +21,21 @@ const length = slides.length
         return null;
     }
 
-    return (
-    <section className='slider'>
-    <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
-    <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
-        {SliderData.map((slide, idx) => {
-            return (
-                <div className={idx === current ? 'slide active' : 'slide'} key={idx}
-                >
-                {idx === current && (
-                    <img src={slide.image} alt='construction' className='image' />
-                )}
-                </div>
-            );
-        })}
-    </section>
+    return (  
+            <section className='slider'>
+            <FaArrowCircleLeft className='left-arrow' onClick={prevSlide} />
+            <FaArrowCircleRight className='right-arrow' onClick={nextSlide} />
+                {SliderData.map((slide, idx) => {
+                    return (
+                        <div className={idx === current ? 'slide active' : 'slide'} key={idx}
+                        >
+                        {idx === current && (
+                            <img src={slide.image} alt='construction' className='image' />
+                        )}
+                        </div>
+                    );
+                })}
+            </section>
     );
 };
 
