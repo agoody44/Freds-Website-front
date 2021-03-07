@@ -22,6 +22,7 @@ const length = slides.length
     }
 
     return (  
+
             <section className='slider'>
             <FaArrowCircleLeft className='left-arrow' onClick={prevSlide} />
             <FaArrowCircleRight className='right-arrow' onClick={nextSlide} />

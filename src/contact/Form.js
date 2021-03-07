@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import profilepic from '../imgs/profilepic.png';
 import generic_license from '../imgs/generic_license.jpg';
+import Insta2 from '../imgs/Insta2.png';
 
 
 export default class Form extends Component {
@@ -158,11 +159,17 @@ resetForm=()=>{
 
                 <div className='Info'>
                     <div className='profilepic'>
-                            <img id='logo' src={profilepic} alt="Logo" />
+                            <img id='logo' src={profilepic} alt="Logo" width="200" height="200" />
                     </div>
+
                     <div className='certificate'>
                             <img id='logo' src={generic_license} alt="Logo" />
                     </div>
+
+                    <div className='Insta'>
+                            <img id='logo' src={Insta2} alt="Logo" />
+                    </div>
+
                 </div>
 
             </div>    

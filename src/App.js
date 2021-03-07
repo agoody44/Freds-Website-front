@@ -19,10 +19,9 @@ function App() {
 
 
       <Header />
+      <hr />
       <HomePage />
       <ImageSlider slides={SliderData} />
-      {/* <Info /> */}
-      <br />
       <Form />
       <Footer/>
       </div>
