@@ -109,7 +109,7 @@ resetForm=()=>{
                     <h1>Contact Me</h1>
                         <form onSubmit={this.formSubmit}>
 
-                                <div className='col'>
+                                <div className='singleItem'>
                                     <label htmlFor="name">Name</label>
                                     <input type="text" 
                                     name="name" 
@@ -129,7 +129,7 @@ resetForm=()=>{
                                 placeholder="your lastname..." />
                             </div> */}
                             
-                                <div className='col'>
+                                <div className='singleItem'>
                                     <label htmlFor="email">Email</label>
                                     <input type="email" 
                                     name="email" 
@@ -140,15 +140,13 @@ resetForm=()=>{
                                     required />
                                 </div>
                             
-                                <div className="textArea row">
-                                    <div className='col'>
+                                <div className="textArea singleItem">
                                         <label htmlFor="message">Message me</label>
                                         <textarea name="message" 
                                         value={this.state.message} 
-                                        id="" cols="30" rows="5" 
+                                        id="" cols="25" rows="5" 
                                         placeholder="your message..." 
                                         onChange={this.handleMessage}></textarea>
-                                    </div>    
                                 </div>
                                 <div className={this.state.sent ?'msg msgAppear':'msg'}>Message has been sent</div>
                                 <div className="btn">

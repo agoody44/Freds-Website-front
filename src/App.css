@@ -18,6 +18,10 @@ hr {
   margin: auto;
 }
 
+.footerHr{
+  border: 1px solid rgb(255, 255, 255);
+}
+
 .Page {
   display: flex;
   flex-direction: row;
@@ -123,21 +127,16 @@ hr {
 
 .Footer {
   display: flex;
-  flex-direction: row;
+  background-color: #a0a0a0;
   justify-content: center;
-  justify-content: space-evenly;
-  color: white;
-  background-color: #b8b8b8;
+  color: #000000;
 }
 
-.Footer p {
-  color: #bb0c0c;
-  margin-bottom: auto;
+.Social {
+  background-color: #c1c1c1;
+  display: flex;
+  justify-content: center;
 }
-
-/* .Insta {
-  float: right;
-} */
 
 
 .form-footer{
@@ -148,15 +147,7 @@ hr {
   justify-content: space-evenly;
 }
 
-/* .Info{
-  display: flex;
-  flex-wrap: nowrap;
-
-} */
-
 .container {
-  /* background-color: rgb(145, 145, 145); */
-  /* margin: 10px auto; */
   width: 400px;
   margin-left: 80px;
 }
@@ -231,11 +222,4 @@ box-shadow: 1px 1px 4px 1px rgb(49,170,240);
   position: relative;
   left: -100px;
 }
-
-/* Contact Me Button */
-
-/* .contact-button{
-  border-radius: 5px;
-  border: 2 px solid rgba(255,255,255,0);
-} */
 

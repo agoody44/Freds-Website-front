@@ -8,6 +8,7 @@ import { SliderData } from "./slider/SliderData";
 
 
 import Form from './contact/Form.js';
+import Social from './contact/Social.js';
 
 
 
@@ -24,6 +25,8 @@ function App() {
       <HomePage />
       <ImageSlider slides={SliderData} />
       <Form />
+      <hr className="footerHr"/>
+      <Social />
       <Footer/>
       </div>
   );
