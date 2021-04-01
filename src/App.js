@@ -20,6 +20,7 @@ function App() {
 
 
       <Header />
+      <br/>
       <hr />
       <br/>
       <HomePage />
