@@ -24,6 +24,7 @@ function App() {
       <br/>
       <HomePage />
       <ImageSlider slides={SliderData} />
+      <br/>
       <Form />
       <hr className="footerHr"/>
       <Social />
