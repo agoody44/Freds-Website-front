@@ -1,6 +1,3 @@
-// import Insta2 from '../imgs/Insta2.png';
-// import { Link } from "react-router-dom";
-
 
 function Footer (props) {
     return (
@@ -8,12 +5,9 @@ function Footer (props) {
 
         <div class="content">
             <p>Copyright &copy; Coast Contracting {new Date().getFullYear()} All Rights Reserved</p>
-        </div>    
+        </div>
 
-        {/* <div className='Insta'>
-            <img id='logo' src={Insta2} alt="Logo" />
-        </div> */}
-{/* 
+        {/* 
         <button className='contact-button'>
             Contact me!
         </button> */}

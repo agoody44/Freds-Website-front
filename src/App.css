@@ -130,6 +130,7 @@ hr {
   background-color: #b6b6b6;
   justify-content: center;
   color: #000000;
+  padding: 15px;
 }
 
 .Social {
@@ -226,7 +227,7 @@ box-shadow: 1px 1px 4px 1px rgb(49,170,240);
 .msgAppear {
   display: block;
   position: relative;
-  left: -100px;
+  left: -140px;
 }
 
 .info {
