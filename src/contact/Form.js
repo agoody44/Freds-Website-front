@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 // import profilepic from '../imgs/profilepic.png';
-import generic_license from '../imgs/generic_license.jpg';
+import generic_license from '../imgs/Contractors_License.png';
 // import Insta2 from '../imgs/Insta2.png';
 
 
@@ -106,9 +106,9 @@ resetForm=()=>{
         return (
             <div className='form-footer'>
                 <div className="container">
+                <br/>
                     <h1>Contact Me</h1>
                         <form onSubmit={this.formSubmit}>
-
                                 <div className='singleItem'>
                                     <label htmlFor="name">Name</label>
                                     <input type="text" 
@@ -153,21 +153,13 @@ resetForm=()=>{
                                     <button type="submit">Submit</button>
                                 </div>
                         </form>
+                        
                 </div>
 
                 <div className='Info'>
-                    {/* <div className='profilepic'>
-                            <img id='logo' src={profilepic} alt="Logo" width="200" height="200" />
-                    </div> */}
-
                     <div className='certificate'>
-                            <img id='logo' src={generic_license} alt="Logo" />
+                            <img id='cert' src={generic_license} alt="Logo" />
                     </div>
-
-                    {/* <div className='Insta'>
-                            <img id='logo' src={Insta2} alt="Logo" />
-                    </div> */}
-
                 </div>
 
             </div>    

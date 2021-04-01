@@ -1,12 +1,13 @@
 import Insta2 from '../imgs/insta2.png';
-// src/imgs/insta2.png
+import Facebook from '../imgs/facebook.png';
 
 function Social (props) {
     return (
     <div className="Social">
 
         <div className='Insta'>
-            <img id='logo' src={Insta2} alt="Logo" />
+            <img id='facebook' src={Facebook} alt="Logo" />
+            <img id='insta' src={Insta2} alt="Logo" />
         </div>
 
     </div>
