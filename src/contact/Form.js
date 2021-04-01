@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import profilepic from '../imgs/profilepic.png';
+// import profilepic from '../imgs/profilepic.png';
 import generic_license from '../imgs/generic_license.jpg';
-import Insta2 from '../imgs/Insta2.png';
+// import Insta2 from '../imgs/Insta2.png';
 
 
 export default class Form extends Component {
@@ -108,7 +108,7 @@ resetForm=()=>{
                 <div className="container">
                     <h1>Contact Me</h1>
                         <form onSubmit={this.formSubmit}>
-                            <div className="row">
+
                                 <div className='col'>
                                     <label htmlFor="name">Name</label>
                                     <input type="text" 
@@ -118,7 +118,7 @@ resetForm=()=>{
                                     onChange={this.handleName} 
                                     placeholder="your name..." />
                                 </div>
-                            </div>
+
                             {/* <div className="row">
                                 <label htmlFor="lastname">Lastname</label>
                                 <input type="text" 
@@ -128,7 +128,7 @@ resetForm=()=>{
                                 onChange={this.handleLastname} 
                                 placeholder="your lastname..." />
                             </div> */}
-                            <div className="row">
+                            
                                 <div className='col'>
                                     <label htmlFor="email">Email</label>
                                     <input type="email" 
@@ -139,36 +139,36 @@ resetForm=()=>{
                                     placeholder="your email..." 
                                     required />
                                 </div>
-                            </div>
-                            <div className="textArea row">
-                                <div className='col'>
-                                    <label htmlFor="message">Message me</label>
-                                    <textarea name="message" 
-                                    value={this.state.message} 
-                                    id="" cols="30" rows="5" 
-                                    placeholder="your message..." 
-                                    onChange={this.handleMessage}></textarea>
-                                </div>    
-                            </div>
+                            
+                                <div className="textArea row">
+                                    <div className='col'>
+                                        <label htmlFor="message">Message me</label>
+                                        <textarea name="message" 
+                                        value={this.state.message} 
+                                        id="" cols="30" rows="5" 
+                                        placeholder="your message..." 
+                                        onChange={this.handleMessage}></textarea>
+                                    </div>    
+                                </div>
                                 <div className={this.state.sent ?'msg msgAppear':'msg'}>Message has been sent</div>
-                            <div className="btn">
-                            <button type="submit">Submit</button>
-                            </div>
+                                <div className="btn">
+                                    <button type="submit">Submit</button>
+                                </div>
                         </form>
                 </div>
 
                 <div className='Info'>
-                    <div className='profilepic'>
+                    {/* <div className='profilepic'>
                             <img id='logo' src={profilepic} alt="Logo" width="200" height="200" />
-                    </div>
+                    </div> */}
 
                     <div className='certificate'>
                             <img id='logo' src={generic_license} alt="Logo" />
                     </div>
 
-                    <div className='Insta'>
+                    {/* <div className='Insta'>
                             <img id='logo' src={Insta2} alt="Logo" />
-                    </div>
+                    </div> */}
 
                 </div>
 

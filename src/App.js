@@ -6,7 +6,7 @@ import Header from './components/Header';
 import ImageSlider from "./slider/ImageSlider";
 import { SliderData } from "./slider/SliderData";
 
-import Info from './contact/Info';
+
 import Form from './contact/Form.js';
 
 
@@ -20,6 +20,7 @@ function App() {
 
       <Header />
       <hr />
+      <br/>
       <HomePage />
       <ImageSlider slides={SliderData} />
       <Form />

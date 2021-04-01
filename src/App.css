@@ -8,8 +8,10 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #f0f0f0;
 }
 
+/* Line divider */
 hr {
   border: 1px solid rgb(0, 0, 0);
   width: 1500px; 
@@ -26,6 +28,7 @@ hr {
   margin: 10px auto;
 }
 
+/* Info About me */
 .welcome {
   background-color: #fefefe;
   text-align: center;
@@ -35,6 +38,7 @@ hr {
   margin:10px;
 }
 
+/* House Photo */
 .generic-house{
   width:600px;
   height: 500px;
@@ -42,14 +46,14 @@ hr {
 }
 
 .Header {
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   padding-left: 10px;
   padding-right: 10px;
-  height: 150px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  color: #0f0cbb;
+  color: #bb0c0c;
 }
 
 
@@ -63,7 +67,7 @@ hr {
   margin-right: 20px;
 }
 
-
+/* Work Images */
 .slider {
   position: relative;
   display: flex;
@@ -76,15 +80,16 @@ hr {
 
 .image {
   width: 650px;
-  height: 500px;
+  height: 1000px;
   border-radius: 10px;
-  border: 2px solid #000000;
+  /* border: 2px solid #000000; */
+  box-shadow: 3px 3px 3px 3px grey;
 }
 
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 200px;
+  right: 150px;
   font-size: 3rem;
   color: #000;
   z-index: 10;
@@ -95,7 +100,7 @@ hr {
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 200px;
+  left: 150px;
   font-size: 3rem;
   color: #000;
   z-index: 10;
@@ -114,46 +119,44 @@ hr {
   transform: scale(1.08);
 }
 
+/* Form in Footer */
 
 .Footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
   color: white;
   background-color: #b8b8b8;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  
 }
 
-
-.copyright{
-  text-align: center;
+.Footer p {
+  color: #bb0c0c;
+  margin-bottom: auto;
 }
 
+/* .Insta {
+  float: right;
+} */
 
-/* Form in Footer */
 
 .form-footer{
   background-color: #c1c1c1;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.Info{
+/* .Info{
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  flex-direction: column;
-  float: center;
-}
 
-/* .container .profilepic .certificate{
-  flex: 0 0 33.333333%;
 } */
 
 .container {
-  /* background-color: rgb(182, 69, 69); */
-  margin: 10px auto;
+  /* background-color: rgb(145, 145, 145); */
+  /* margin: 10px auto; */
   width: 400px;
   margin-left: 80px;
 }
@@ -163,7 +166,7 @@ hr {
   padding: 5px;
 }
 
-.container label {
+.container form label {
   display: block;
   letter-spacing: 0.1rem;
   font-style: italic;
@@ -186,7 +189,6 @@ box-shadow: 1px 1px 4px 1px rgb(49,170,240);
 .btn {
   width: 100%;
   text-align: center;
-  
 }
 
 .btn button {
@@ -230,14 +232,10 @@ box-shadow: 1px 1px 4px 1px rgb(49,170,240);
   left: -100px;
 }
 
-/* @media screen and (min-width:664px) {
-  .container{
-  width: 60%;
-}  
-}
-@media screen and (min-width:986px) {
-  .container{
-  width: 40%;
-}  
+/* Contact Me Button */
+
+/* .contact-button{
+  border-radius: 5px;
+  border: 2 px solid rgba(255,255,255,0);
 } */
 
