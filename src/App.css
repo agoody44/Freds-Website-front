@@ -86,15 +86,14 @@ hr {
   width: 650px;
   height: 800px;
   border-radius: 10px;
-  /* border: 2px solid #000000; */
   box-shadow: 3px 3px 3px 3px grey;
 }
 
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 150px;
-  font-size: 3rem;
+  right: 200px;
+  font-size: 5rem;
   color: #000;
   z-index: 10;
   cursor: pointer;
@@ -104,8 +103,8 @@ hr {
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 150px;
-  font-size: 3rem;
+  left: 200px;
+  font-size: 5rem;
   color: #000;
   z-index: 10;
   cursor: pointer;
