@@ -6,7 +6,7 @@ export default function Social (props) {
     <div className="Social">
         <div className='Insta'>
             <img id='facebook' src={Facebook} alt="Logo" />
-            <img id='insta' src={Insta2} alt="Logo" />
+            <img id='insta2' src={Insta2} alt="Logo" />
         </div>
     </div>
     )
