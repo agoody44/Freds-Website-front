@@ -1,5 +1,5 @@
 import Facebook from '../imgs/facebook.png';
-import Insta from '../imgs/insta.png';
+import Insta from '../imgs/Insta.png';
 
 export default function Social (props) {
     return (
